@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Javascript</title>
+</head>
+<body>
+    <p id="texto"> Eu sou um parágrafo</p>
+    <button id="botao">Clique em mim</button>
+
+    <!-- objetivo: mostrar no parágrafo quantas vezes o botão foi clicado -->
+
+    <script>
+        console.log("Hello World!");
+        let b = document.getElementById("botao");
+        let t = document.getElementById("texto");
+
+        console.log(b);
+        b.innerHTML = "Clica logo"
+
+
+        // função ṕara contar numero de clicks
+
+        let contador = 0;
+        function clicou() {
+            contador++
+            console.log (contador);
+            if(contador ==1){
+                t.innerHTML= "Você clicou " +contador+ " vez!";
+            } else{ 
+                t.innerHTML= "Você clicou " +contador+ " vezes!";
+            }
+            
+        }
+
+        // adicionar um evento no botao
+        b.addEventListener ("click", clicou)
+
+    </script>
+    
+</body>
+</html>
